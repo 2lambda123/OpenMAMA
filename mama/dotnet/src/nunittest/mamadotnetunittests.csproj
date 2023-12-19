@@ -2,7 +2,7 @@
     <PropertyGroup>
         <AssemblyName>mamaunittestscs</AssemblyName>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <Title>OpenMAMA</Title>
         <Description>OpenMAMA API C# Unit Tests</Description>
         <Configuration>OpenMAMA API C# Unit Tests</Configuration>
@@ -13,10 +13,10 @@
         <StartupObject>NUnitTest.MamaCommon</StartupObject>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="NUnitLite" Version="3.13.3" />
-        <PackageReference Include="nunit" Version="3.13.3" />
-        <PackageReference Include="NUnit3TestAdapter" Version="4.4.2" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+        <PackageReference Include="NUnitLite" Version="3.14.0" />
+        <PackageReference Include="nunit" Version="3.14.0" />
+        <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\cs\mamadotnet.csproj" />
