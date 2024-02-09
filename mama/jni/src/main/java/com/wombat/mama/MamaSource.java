@@ -122,7 +122,9 @@ public class MamaSource extends MamaSourceManager
     public String getStateAsString ()
     {
         if (myState != null)
-        return myState.toString();
+        {
+            return myState.toString();
+        }
 
         return MamaSourceState.UKNOWN.toString();
     }

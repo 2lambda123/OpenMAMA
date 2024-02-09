@@ -286,12 +286,16 @@ class MamdaOrderBookWriter
                    (int)plCount);             
         
         if (delta.getEventTime() != null)
-        msg.addDateTime (null, MamdaOrderBookFields.BOOK_TIME.getFid(),
+        {
+            msg.addDateTime (null, MamdaOrderBookFields.BOOK_TIME.getFid(),
                          delta.getEventTime());
+        }
         
         if (delta.getSrcTime() != null)
-        msg.addDateTime (null, MamdaCommonFields.SRC_TIME.getFid(),
+        {
+            msg.addDateTime (null, MamdaCommonFields.SRC_TIME.getFid(),
                          delta.getSrcTime());
+        }
 
         if (delta.getEventSeqNum() != 0)
         {
