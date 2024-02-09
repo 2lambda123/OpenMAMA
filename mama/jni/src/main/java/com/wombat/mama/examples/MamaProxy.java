@@ -41,6 +41,7 @@ import com.wombat.mama.MamaTimerCallback;
 import com.wombat.mama.MamaTransport;
 import com.wombat.mama.MamaTransportListener;
 import com.wombat.mama.MamaSubscriptionType;
+import io.github.pixee.security.BoundedLineReader;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -297,7 +298,7 @@ public class MamaProxy
             new BufferedReader (new InputStreamReader (input));
 
             String symbol;
-            while (null != (symbol = reader.readLine()))
+            while (null != (symbol = BoundedLineReader.readLine(reader, 5_000_000)))
             {
                 if (!symbol.equals(""))
                 {
