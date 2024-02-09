@@ -1,5 +1,6 @@
 package com.wombat.mama.examples;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.logging.Logger;
@@ -341,7 +342,7 @@ public class MamaListenCached
             new BufferedReader (new InputStreamReader (input));
 
         String symbol;
-        while (null != (symbol = reader.readLine()))
+        while (null != (symbol = BoundedLineReader.readLine(reader, 5_000_000)))
         {
             if (!symbol.equals(""))
             {
