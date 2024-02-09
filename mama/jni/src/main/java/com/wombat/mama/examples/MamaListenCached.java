@@ -871,7 +871,9 @@ public class MamaListenCached
                                             myFieldCache.find (field.getFid()); 
                  
                          if (mfcui32.get() != field.getU32())
-                         failedField = failedField + " " + field.getName();                            
+                         {
+                             failedField = failedField + " " + field.getName();
+                         }                            
                          break;
                     case MamaFieldDescriptor.I64:
                          MamaFieldCacheInt64 mfci64 = (MamaFieldCacheInt64) 

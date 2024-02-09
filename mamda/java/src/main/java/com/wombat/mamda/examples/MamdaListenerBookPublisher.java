@@ -478,7 +478,9 @@ public class MamdaListenerBookPublisher
                 }
             }
             else
-            System.out.println("Received request for unknown symbol: \n" +  symbol);
+            {
+                System.out.println("Received request for unknown symbol: \n" +  symbol);
+            }
 
             System.out.flush();          
         }

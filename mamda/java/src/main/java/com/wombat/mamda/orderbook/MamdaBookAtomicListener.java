@@ -1099,7 +1099,9 @@ public class MamdaBookAtomicListener implements MamdaMsgListener,
                     if (!getEntriesInfo (entMsg))
                     {
                         if (mLogger.isLoggable (Level.FINEST))
-                        mLogger.finest ("entry not in level (or main) message");
+                        {
+                            mLogger.finest ("entry not in level (or main) message");
+                        }
                         return;
                     }
 
@@ -1170,7 +1172,9 @@ public class MamdaBookAtomicListener implements MamdaMsgListener,
                         if (!getEntriesInfo (entMsg))
                         {
                             if (mLogger.isLoggable (Level.FINEST))
-                            mLogger.finest ("entry not in level (or main) message");
+                            {
+                                mLogger.finest ("entry not in level (or main) message");
+                            }
                             return;
                         }
 

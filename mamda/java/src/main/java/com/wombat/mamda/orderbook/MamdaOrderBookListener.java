@@ -484,7 +484,9 @@ public class MamdaOrderBookListener
                 "Attempted to get a NULL/empty full order book snapshot");
         }
         else
-        mSnapshotMapLock.releaseWriteLock();
+        {
+            mSnapshotMapLock.releaseWriteLock();
+        }
 
         listener.mFullBookLock.acquireWriteLock();
         MamdaOrderBook newBook = new MamdaOrderBook (listener.mFullBook);
@@ -603,9 +605,11 @@ public class MamdaOrderBookListener
                               MamaMsg            msg)
     {
         if (mLogger.isLoggable (Level.FINE))
-        mLogger.fine (
+        {
+            mLogger.fine (
                   "MamdaOrderBookListener: handling CLEAR for order book " +
                   subscription.getSymbol());
+        }
 
         mFullBookLock.acquireWriteLock();
         processBookMessage (subscription, msg, true);
